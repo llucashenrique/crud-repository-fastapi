@@ -121,6 +121,14 @@ curl -X PUT "http://localhost:8000/customers/1" \
 curl -X DELETE "http://localhost:8000/customers/1"
 ```
 
+## Como entrar no banco
+```bash
+docker exec -it postgres_crud bash
+psql -U crud_user -d crud_db
+\dt
+SELECT * FROM customers;
+```
+
 ## Parar os serviços
 ```bash
 docker compose down
